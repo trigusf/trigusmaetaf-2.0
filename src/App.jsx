@@ -6,13 +6,18 @@ import './App.css'
 
 import Navbar from './components/navbar'
 import Hero from './components/hero'
+import Project from './components/project'
+
 
 export default function Home() {
 
   return (
     <>
       <Navbar />
+    <div className='flex flex-col gap-8'>
       <Hero />
+      <Project />
+    </div>
     </>
   )
 }

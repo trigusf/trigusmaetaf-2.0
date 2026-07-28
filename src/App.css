@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
+@plugin "daisyui";
 
 
 :root{
@@ -7,8 +8,10 @@
   --surface: #f8fafc;
   --text: #111827;
   --text-sec: #6b7280;
+  --text-btn: #fafafa;
   --border: #e5e7eb;
   --primary: #2563eb;
+  --button: #0a0a0a;
 }
 
 .dark{
@@ -16,8 +19,10 @@
   --surface: #18181b;
   --text: #fafafa;
   --text-sec: #a1a1aa;
+  --text-btn: #111827;
   --border: #27272a;
   --primary: #60a5fa;
+  --button: #ffffff
 }
 
 *{
