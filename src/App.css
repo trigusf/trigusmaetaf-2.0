@@ -12,6 +12,9 @@
   --border: #e5e7eb;
   --primary: #2563eb;
   --button: #0a0a0a;
+  --shadow: rgba(15,23,42,.06);
+  --navbar: rgba(255,255,255,.75);
+
 }
 
 .dark{
@@ -22,7 +25,9 @@
   --text-btn: #111827;
   --border: #27272a;
   --primary: #60a5fa;
-  --button: #ffffff
+  --button: #ffffff;
+  --shadow: rgba(0,0,0,.35);
+  --navbar: rgba(10,10,10,.75);
 }
 
 *{
@@ -33,3 +38,9 @@ body{
   font-family: "Geist", sans-serif;
 }
 
+.scrolled{
+  background-color: var(--navbar);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px var(--shadow);
+}

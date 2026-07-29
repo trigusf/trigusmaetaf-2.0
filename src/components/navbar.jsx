@@ -1,36 +1,49 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { Icon } from "@iconify/react";
 
 
 export default function Navbar(){
 
 const [darkMode, setDarkMode] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
 
 useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
+
 },[darkMode])
+
+useEffect(() => {
+
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+})
 
 
     return (
-        <>
-            <nav className="fixed w-full z-50 bg-[var(--surface)] py-3 border-b border-b-[var(--border)] flex justify-center">
-                <div className="lg:max-w-2xl md:max-w-2xl px-4 w-full flex justify-between items-center text-sm text-[var(--text)]">
+        
+            <nav className={`fixed w-full z-50 bg-[var(--surface)] py-3 md:py-4 border-b border-b-[var(--border)] flex justify-center ${isScrolled ? 'scrolled' : ''}`}>
+                <div className="lg:max-w-3xl md:max-w-2xl px-4 w-full flex justify-between items-center text-sm text-[var(--text)] text-[11px] md:text-[16px]">
                     <div className="font-semibold">TR</div>
-                    <div className="flex gap-2 font-light items-center text-[var(--text-sec)]">
-                        <div className="flex gap-2 lg:gap-4 text-[11px] lg:text-[13px] items-center px-2 py-0.5 border-r border-r-[var(--border)]">
+                    <div className="flex gap-2 md:gap-4 font-light items-center text-[var(--text-sec)]">
+                        <div className="flex gap-2 lg:gap-4  items-center py-0.5">
                             <div className="hover:text-[var(--text)] cursor-pointer">Projects</div>
                             <div className="hover:text-[var(--text)] cursor-pointer">Experience</div>
                             <div className="hover:text-[var(--text)] cursor-pointer">Skills</div>
                         </div>
+                        <div className="border-r h-6 md:h-8 border-r-[var(--border)] "></div>
                         <button className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
                             {darkMode ?
-                             <Moon size={14}/> 
+                             <Icon icon={"si:moon-fill"} />
                              : 
-                             <Sun size={14} />}
+                             <Icon icon={"si:sun-fill"} />}
                         </button>
                     </div>
                 </div>
             </nav>
-        </>
+    
     )
 }

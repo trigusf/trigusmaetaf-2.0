@@ -20,7 +20,7 @@ export const projects = [
     },
     {
         id : 3,
-        repo : "Apex Gaming",
+        repo : "Apex Gaming E-commerce",
         desc : "Modern gaming ecommerce landing page built with Tailwind CSS and JavaScript.",
         img  : "coming soon",
         tech : ["Tailwind CSS", "JavaScript"],
@@ -29,7 +29,7 @@ export const projects = [
     },
     {
         id : 4,
-        repo : "BrewSpace",
+        repo : "BrewSpace Coffe Shop",
         desc : "Modern responsive Coffee Shop landing page built with HTML, Tailwind CSS, and AOS animation.",
         img  : "coming soon",
         tech : ["Tailwind CSS", "JavaScript"],
@@ -43,6 +43,15 @@ export const projects = [
         img  : "coming soon",
         tech : ["php", "JavaScript", "MySQL"],
         role : "FullStack Developer",
+        url  : null
+    },
+    {
+        id : 6,
+        repo : "Service Desk - Ticketing system",
+        desc : "An internal service desk application built with Laravel 10 and Tailwind CSS to track, manage, and resolve inter-team support tickets.",
+        img  : "coming soon",
+        tech : ["Laravel", "JavaScript", "MySQL", "Tailwind CSS"],
+        role : "Frontend Developer",
         url  : null
     }
 ]

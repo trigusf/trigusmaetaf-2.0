@@ -6,20 +6,20 @@ import { Icon } from "@iconify/react";
 export default function Hero(){
     return(
         <>
-            <div className="flex justify-center pt-12 md:pt-6 lg:pt-6">
-                <div className="lg:max-w-2xl md:max-w-2xl lg:pt-16 md:pt-16 w-full p-4">
+            <div className="flex justify-center pt-12">
+                <div className="md:max-w-3xl md:pt-16 w-full p-4">
                     <div className="flex items-center gap-3">
-                        <div className="w-20 h-20 lg:w-28 lg:h-28 md:w-24 md:h-24 bg-[var(--bg)] border rounded-full overflow-hidden shadow-md">
+                        <div className="w-20 h-20 lg:w-38 lg:h-38 md:w-24 md:h-24 bg-[var(--bg)] border rounded-full overflow-hidden shadow-md">
                             <img src="#" alt="trigusmaetaf" className="w-full h-full object-cover" />
                         </div>
-                        <div className="text-[var(--text)]">
-                            <div className="flex items-center gap-1 lg:text-2xl md:text-2xl">
+                        <div className="text-[var(--text)] flex flex-col md:gap-2">
+                            <div className="flex items-center gap-1 md:text-3xl">
                                 <span className="font-semibold">Trigusmaetaf</span>
                                 <Icon icon={"si:verified-fill"} color="oklch(62.3% 0.214 259.815)"/>
 
                             </div>
 
-                            <div className="flex gap-1 items-center mt-1">
+                            <div className="flex gap-1 md:gap-2 items-center mt-1 md:text-2xl">
                                 <a href="https://github.com/trigusf" target="blank_" className="text-[var(--text-sec)] hover:text-[var(--text)] transition-all hover:-translate-y-1 duration-200">
                                     <Icon icon={"mdi:github"} />
                                 </a>
@@ -36,9 +36,9 @@ export default function Hero(){
                         </div>
                     </div>
                     <div className="text-[var(--text)] pt-4">
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 md:gap-6">
                             <span className="font-medium text-lg md:text-2xl lg:text-3xl">Web Developer</span>
-                            <p className="text-xs md:text-sm lg:text-sm text-[var(--text-sec)]">
+                            <p className="text-xs md:text-lg text-[var(--text-sec)]">
                                 I'm a Web Developer with hands-on experience building responsive web applications using {""}
                                 <Skills id={'JavaScript'} /> {" "}
                                 <Skills id={'React'} /> {" "}
