@@ -5,11 +5,15 @@ import { Icon } from "@iconify/react";
 
 export default function Navbar(){
 
-const [darkMode, setDarkMode] = useState(false);
+const [darkMode, setDarkMode] = useState(() => {
+    const saveTheme = localStorage.getItem('darkMode');
+    return saveTheme !== null ? JSON.parse(saveTheme) : false;
+});
 const [isScrolled, setIsScrolled] = useState(false);
 
 useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
+    const setTheme = document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem('darkMode', JSON.stringify(setTheme))
 
 },[darkMode])
 
