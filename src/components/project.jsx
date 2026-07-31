@@ -3,9 +3,10 @@ import { getIcon, Icon } from "@iconify/react";
 import { projects } from "../data/projects";
 import { skills } from "../data/skills";
 import Button from "./button";
+import { Link } from "react-router-dom";
 
 
-export default function Project(){
+export default function Project({project, showButton, title}){
 
     function getSkillIcon({nameSkill}){
 
@@ -23,10 +24,10 @@ export default function Project(){
                 <div className="max-w-3xl p-4 w-full">
                     <div className="flex flex-col gap-4 items-center">
                         <span className="text-lg font-medium md:text-3xl items-start w-full self-start">
-                            Projects
+                            {title}
                         </span>
                         <div className="grid grid-cols-1 min-[490px]:grid-cols-2 gap-6">
-                            {projects.slice(0, 4).map((project) => (
+                            {projects.map((project) => (
                                 <div key={project.id} className="flex flex-col gap-2 bg-[var(--surface)] p-2 border border-[var(--border)] border-dashed rounded-md shadow-2xs hover:shadow-md transition-all duration-200">
                                     <div className="w-full h-38 md:h-42 bg-[var(--border)] overflow-hidden rounded-md">
                                         <img src={project.img} alt="Soon" className="w-full h-full object-cover" />
@@ -47,11 +48,15 @@ export default function Project(){
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                        <div className="pt-4">
-                            <Button>View More Project</Button>
-                        </div>
-
+                        </div>  
+                        {showButton && (
+                            <Link to="/projects" className="pt-4">
+                                <Button>
+                                    View More Project
+                                </Button>
+                            </Link>
+                        )}
+                        
                     </div>
                 </div>
             </div>

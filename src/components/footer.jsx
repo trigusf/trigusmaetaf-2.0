@@ -5,7 +5,7 @@ export default function Footer(){
     return (
         <>
         
-            <div className="max-w-3xl w-full p-4 mb-4 md:mb-12 text-[var(--text)]">
+            <div className="sticky max-w-3xl w-full p-4 mb-4 md:mb-12 text-[var(--text)]">
                 <div className="flex flex-col w-full gap-2 md:gap-3">
                     <div className="flex flex-col gap-4">
                         <span className="text-lg font-medium md:text-3xl items-start w-full self-start">

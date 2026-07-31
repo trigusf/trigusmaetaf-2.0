@@ -2,31 +2,38 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-
+import Home from './pages/home'
+import Projects from './pages/projects'
 import Navbar from './components/navbar'
-import Hero from './components/hero'
-import Project from './components/project'
-import Experience from './components/experience'
-import Technologie from './components/technologie'
-import Education from './components/education'
 import Footer from './components/footer'
 
 
-export default function Home() {
+export default function App() {
 
   return (
-    <>
-      <Navbar />
+    <BrowserRouter>
     <div className='flex flex-col gap-8 items-center'>
-      <Hero />
-      <Project />
-      <Experience />
-      <Technologie />
-      <Education />
+      <Navbar />
+      <Routes>
+
+        <Route 
+          path="/"
+          element={<Home />}
+        />
+
+        <Route 
+          path='/projects'
+          element={<Projects />}
+        />
+
+      </Routes>
       <Footer />
     </div>
-    </>
+      
+
+    </BrowserRouter>
   )
 }
 

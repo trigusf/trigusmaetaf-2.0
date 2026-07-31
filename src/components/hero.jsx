@@ -47,7 +47,10 @@ export default function Hero(){
                                 <Skills id={'MySQL'} /> {" "}
                                 through personal projects and internship experience. Passionate about creating clean, user-friendly interfaces while continuously expanding knowledge in modern frontend and backend development. Professional experience in finance administration has strengthened analytical thinking, attention to detail, and effective cross functional collaboration.     
                             </p>
-                            <Button href="https://drive.google.com/file/d/14QbeshcKOogmOsVVg6Gd4jFSW9Gvx4s6/view?usp=sharing">View Resume</Button>
+                            <a href="https://drive.google.com/file/d/14QbeshcKOogmOsVVg6Gd4jFSW9Gvx4s6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                <Button>View Resume</Button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
