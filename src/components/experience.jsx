@@ -12,9 +12,9 @@ export default function Experience(){
                         Experience
                         </span>
 
-                        <a href="" className="flex gap-1 items-center text-[var(--text-sec)] text-xs md:text-lg hover:text-[var(--text)] transition-all duration-150">
+                        {/* <a href="" className="flex gap-1 items-center text-[var(--text-sec)] text-xs md:text-lg hover:text-[var(--text)] transition-all duration-150">
                             See Detail <MoveRight size={14}/>
-                        </a>
+                        </a> */}
                     </div>
 
                     <div className="flex flex-col gap-4 md:gap-8 w-full self-start">

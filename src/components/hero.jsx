@@ -2,15 +2,16 @@ import { useState } from "react";
 import Button from "./button";
 import Skills from "./skills";
 import { Icon } from "@iconify/react";
+import trigusmaetaf from "../assets/profile/trigusmaetaf.jpeg"
 
 export default function Hero(){
     return(
         <>
-            <div className="flex justify-center pt-12">
+            <div className="flex justify-center pt-12 md:pt-35">
                 <div className="md:max-w-3xl md:pt-16 w-full p-4">
                     <div className="flex items-center gap-3">
-                        <div className="w-20 h-20 lg:w-38 lg:h-38 md:w-24 md:h-24 bg-[var(--bg)] border rounded-full overflow-hidden shadow-md">
-                            <img src="#" alt="trigusmaetaf" className="w-full h-full object-cover" />
+                        <div className="flex items-center w-20 h-20 lg:w-38 lg:h-38 md:w-24 md:h-24 bg-[var(--bg)] border border-[var(--border)] rounded-full overflow-hidden shadow-md">
+                            <img src={trigusmaetaf} alt="trigusmaetaf" className="w-full h-full scale-250 object-cover" loading="lazy"/>
                         </div>
                         <div className="text-[var(--text)] flex flex-col md:gap-2">
                             <div className="flex items-center gap-1 md:text-3xl">

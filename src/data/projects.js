@@ -1,12 +1,20 @@
+import apexGaming from "../assets/project/apexGaming/apexGaming.png";
+import brewSpace from "../assets/project/brewSpace/brewSpace.png";
+import inverntoryManagement from "../assets/project/inventoryManagement/inventoryManagement.jpeg";
+import serviceDesk from "../assets/project/serviceDesk/serviceDesk.jpeg"
+
+
+
 export const projects = [
     {
         id : 1,
-        repo : "POS SelfService Coffe Shop",
+        repo : "POS Self-Service Coffe Shop",
         desc : "A web-based self-service ordering system designed for coffee shops",
         img  : "coming soon",
         tech : ["React", "Tailwind CSS", "Supabase"],
         role : "Backend Developer",
-        url  : null
+        url  : null,
+        github : "https://github.com/trigusf/POS-SelfServices-CoffeShop"
 
     },
     {
@@ -16,42 +24,47 @@ export const projects = [
         img  : "coming soon",
         tech : ["Java", "MySQL"],
         role : "Backend Developer",
-        url  : null
+        url  : null,
+        github : "https://github.com/trigusf/POS-CoffeShop"
     },
     {
         id : 3,
         repo : "Apex Gaming E-commerce",
         desc : "Modern gaming ecommerce landing page built with Tailwind CSS and JavaScript.",
-        img  : "coming soon",
+        img  : apexGaming,
         tech : ["Tailwind CSS", "JavaScript"],
         role : "Frontend Developer",
-        url  : "https://apexGaming.vercel.app"
+        url  : "https://apexGaming.vercel.app",
+        github : "https://github.com/trigusf/ApexGaming"
     },
     {
         id : 4,
         repo : "BrewSpace Coffe Shop",
         desc : "Modern responsive Coffee Shop landing page built with HTML, Tailwind CSS, and AOS animation.",
-        img  : "coming soon",
+        img  : brewSpace,
         tech : ["Tailwind CSS", "JavaScript"],
         role : "Frontend Developer",
-        url  : "https://brew-space.vercel.app"
+        url  : "https://brew-space.vercel.app",
+        github : "https://github.com/trigusf/BrewSpace"
     },
     {
         id : 5,
         repo : "Inventory Management System",
         desc : "A web-based inventory management system designed to streamline stock tracking, manage incoming & outgoing goods, and generate accurate real-time reports.",
-        img  : "coming soon",
+        img  : inverntoryManagement,
         tech : ["php", "JavaScript", "MySQL"],
         role : "FullStack Developer",
-        url  : null
+        url  : null,
+        github : "https://github.com/trigusf/persediaan-barang"
     },
     {
         id : 6,
         repo : "Service Desk - Ticketing system",
         desc : "An internal service desk application built with Laravel 10 and Tailwind CSS to track, manage, and resolve inter-team support tickets.",
-        img  : "coming soon",
+        img  : serviceDesk,
         tech : ["Laravel", "JavaScript", "MySQL", "Tailwind CSS"],
-        role : "Frontend Developer",
-        url  : null
+        role : "Frontend Developer - intern",
+        url  : null,
+        github : null,
     }
 ]
