@@ -1,7 +1,8 @@
 import apexGaming from "../assets/project/apexGaming/apexGaming.png";
 import brewSpace from "../assets/project/brewSpace/brewSpace.png";
 import inverntoryManagement from "../assets/project/inventoryManagement/inventoryManagement.jpeg";
-import serviceDesk from "../assets/project/serviceDesk/serviceDesk.jpeg"
+import serviceDesk from "../assets/project/serviceDesk/serviceDesk.jpeg";
+import admin from "../assets/project/POSSelfService/admin.png"; 
 
 
 
@@ -10,7 +11,7 @@ export const projects = [
         id : 1,
         repo : "POS Self-Service Coffe Shop",
         desc : "A web-based self-service ordering system designed for coffee shops",
-        img  : "coming soon",
+        img  : admin,
         tech : ["React", "Tailwind CSS", "Supabase"],
         role : "Backend Developer",
         url  : null,

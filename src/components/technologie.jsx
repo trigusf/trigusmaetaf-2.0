@@ -1,10 +1,17 @@
 import Skills from "./skills"
+import { motion } from "motion/react"
 
 export default function Technologie(){
     return(
         <>
         
-            <div className="max-w-3xl w-full p-4 text-[var(--text)]">
+            <motion.div
+             initial={{opacity: 0, x: -200}}
+             whileInView={{opacity: 1, x: 0}}
+             transition={{duration: 1}}
+             viewport={{once: true}}
+             
+             className="max-w-3xl w-full p-4 text-[var(--text)]">
                 <div className="flex flex-col gap-4 ">
                     <span className="text-lg font-medium md:text-3xl items-start w-full self-start">
                     Technologies
@@ -38,7 +45,7 @@ export default function Technologie(){
                     </div>
                 </div>
                 
-            </div>
+            </motion.div>
         
         </>
     )

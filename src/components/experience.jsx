@@ -1,11 +1,17 @@
 import { experiences } from "../data/experiences";
 import { MoveRight } from "lucide-react";
+import { motion } from "motion/react";
 
 
 export default function Experience(){
     return (
         <>
-            <div className="max-w-3xl p-4 text-[var(--text)] w-full">
+            <motion.div 
+            initial={{opacity: 0, x: -200}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1}}
+            viewport={{once: true}}
+            className="max-w-3xl p-4 text-[var(--text)] w-full">
                 <div className="flex flex-col gap-2 md:gap-6 items-center">
                     <div className="flex justify-between w-full items-center">
                         <span className="text-lg font-medium md:text-3xl self-start">
@@ -40,7 +46,7 @@ export default function Experience(){
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
