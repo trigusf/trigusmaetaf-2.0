@@ -5,7 +5,8 @@ import ProjectCard from "../components/card/projectCard";
 import { skills } from "../data/skills";
 import { Link } from "react-router-dom";
 import { MoveLeft, MoveRight } from "lucide-react";
-
+import { div } from "motion/react-client";
+import { motion } from "motion/react";
 
 export default function Projects({project}){
 
@@ -41,7 +42,9 @@ export default function Projects({project}){
                             <div>
                                 <div className="grid grid-cols-1 min-[490px]:grid-cols-2 gap-6">
                                     {projects.map((project) => (
-                                        <ProjectCard key={project.id} project={project} getSkillIcon={getSkillIcon} />
+                                       
+                                            <ProjectCard key={project.id} project={project} getSkillIcon={getSkillIcon} />
+                                        
                                     ))}
                                 </div>  
                             </div>

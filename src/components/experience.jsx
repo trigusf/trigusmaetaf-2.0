@@ -1,12 +1,14 @@
 import { experiences } from "../data/experiences";
 import { MoveRight } from "lucide-react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 
 export default function Experience(){
     return (
         <>
             <motion.div 
+            id="Experiences" 
             initial={{opacity: 0, x: -200}}
             whileInView={{opacity: 1, x: 0}}
             transition={{duration: 1}}
@@ -18,9 +20,9 @@ export default function Experience(){
                         Experience
                         </span>
 
-                        {/* <a href="" className="flex gap-1 items-center text-[var(--text-sec)] text-xs md:text-lg hover:text-[var(--text)] transition-all duration-150">
+                        <Link to="/experiences" onClick={() => window.scrollTo(0, 0)}  className="flex gap-1 items-center text-[var(--text-sec)] text-xs md:text-lg hover:text-[var(--text)] transition-all duration-150">
                             See Detail <MoveRight size={14}/>
-                        </a> */}
+                        </Link>
                     </div>
 
                     <div className="flex flex-col gap-4 md:gap-8 w-full self-start">

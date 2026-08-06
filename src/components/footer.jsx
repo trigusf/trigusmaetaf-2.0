@@ -1,11 +1,17 @@
 import { Icon } from "@iconify/react"
+import { motion } from "motion/react"
 
 
 export default function Footer(){
     return (
         <>
         
-            <div className="sticky max-w-3xl w-full p-4 mb-4 md:mb-12 text-[var(--text)]">
+            <motion.div
+                initial={{opacity: 0, y: -220}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.5}}
+                viewport={{once: true}}
+                className="sticky max-w-3xl w-full p-4 mb-4 md:mb-8 text-[var(--text)]">
                 <div className="flex flex-col w-full gap-2 md:gap-3">
                     <div className="flex flex-col gap-4">
                         <span className="text-lg font-medium md:text-3xl items-start w-full self-start">
@@ -32,7 +38,7 @@ export default function Footer(){
                         </div>
                     </div>
                     <div className="w-full border border-[var(--border)] border-dashed"></div>
-                    <div className="flex flex-col md:flex-row md:justify-between     items-center">
+                    <div className="flex flex-col md:flex-row md:justify-between items-center pt-5">
                         <div className="items-center flex flex-col md:items-start">
                             <span className="italic text-[9px] md:text-sm text-[var(--text-sec)]">
                                 If the rice has already turn into porrige, then make a tastier porrige
@@ -46,7 +52,7 @@ export default function Footer(){
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
 
         </>
     )

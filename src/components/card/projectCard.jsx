@@ -6,8 +6,8 @@ export default function ProjectCard({project, getSkillIcon}){
 
     return(
         <>
-            <div className="cursor-pointer flex flex-col gap-2 bg-[var(--surface)] p-2 border border-[var(--border)] border-dashed rounded-md shadow-2xs hover:shadow-md transition-all duration-200">
-                <div className="group w-full items-center align-middle flex h-38 md:h-46 bg-[var(--border)] overflow-hidden rounded-md group-hover:inset-shadow-sm">
+            <div className="cursor-pointer flex flex-col gap-2 md:h-full bg-[var(--surface)] p-2 border border-[var(--border)] border-dashed rounded-md shadow-2xs hover:shadow-md transition-all duration-200">
+                <div className="group w-full items-center align-middle flex h-44 md:h-46 bg-[var(--border)] overflow-hidden rounded-md group-hover:inset-shadow-sm">
                     <img src={project.img} alt="Soon" className="scale-95 rounded-sm object-cover group-hover:scale-98 transition-transform" />
                 </div>
                 <div className="flex flex-col">
@@ -26,14 +26,14 @@ export default function ProjectCard({project, getSkillIcon}){
                         ))}
                     </div>
                     <div className="flex gap-2">
-                        {project.github && 
-                            <a href={project.github} target="_blank" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
-                                <Icon icon={"mdi:github"} />
-                            </a>
-                        }
                         {project.url &&
                             <a href={project.url} target="_blank" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
                                 <Icon icon="mingcute:link-line" />
+                            </a>
+                        }
+                        {project.github && 
+                            <a href={project.github} target="_blank" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
+                                <Icon icon={"mdi:github"} />
                             </a>
                         }
                     </div>

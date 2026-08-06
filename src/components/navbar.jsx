@@ -27,6 +27,15 @@ useEffect(() => {
     return () => window.removeEventListener('scroll', handleScroll);
 })
 
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+
+    element.scrollIntoView({
+        behavior: "smooth",
+        block : "center",
+    })
+}
+
 
     return (
         
@@ -35,9 +44,9 @@ useEffect(() => {
                     <Link to="/" className="font-semibold">TR</Link>
                     <div className="flex gap-2 md:gap-4 font-light items-center text-[var(--text-sec)]">
                         <div className="flex gap-2 lg:gap-4  items-center py-0.5">
-                            <Link to="/projects" className="hover:text-[var(--text)] cursor-pointer">Projects</Link>
-                            <div className="hover:text-[var(--text)] cursor-pointer">Experience</div>
-                            <div className="hover:text-[var(--text)] cursor-pointer">Skills</div>
+                            <Link to="/projects" onClick={() => window.scrollTo(0, 0)} className="hover:text-[var(--text)] cursor-pointer">Projects</Link>
+                            <Link to="/experiences" onClick={() => window.scrollTo(0, 0)} className="hover:text-[var(--text)] cursor-pointer">Experience</Link>
+                            <button onClick={() => scrollToSection("Skills")} className="hover:text-[var(--text)] cursor-pointer">Skills</button>
                         </div>
                         <div className="border-r h-6 md:h-8 border-r-[var(--border)] "></div>
                         <button className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>

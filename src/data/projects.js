@@ -3,6 +3,7 @@ import brewSpace from "../assets/project/brewSpace/brewSpace.png";
 import inverntoryManagement from "../assets/project/inventoryManagement/inventoryManagement.jpeg";
 import serviceDesk from "../assets/project/serviceDesk/serviceDesk.jpeg";
 import admin from "../assets/project/POSSelfService/admin.png"; 
+import POSCoffeShop from "../assets/project/POSCoffeShop/POSCoffeShop.png";
 
 
 
@@ -22,7 +23,7 @@ export const projects = [
         id : 2,
         repo : "Point Of Sales Coffe Shop",
         desc : "A desktop-based Point of Sale (POS) application built with JavaFX to streamline coffee shop operations.",
-        img  : "coming soon",
+        img  : POSCoffeShop,
         tech : ["Java", "MySQL"],
         role : "Backend Developer",
         url  : null,
@@ -40,16 +41,6 @@ export const projects = [
     },
     {
         id : 4,
-        repo : "BrewSpace Coffe Shop",
-        desc : "Modern responsive Coffee Shop landing page built with HTML, Tailwind CSS, and AOS animation.",
-        img  : brewSpace,
-        tech : ["Tailwind CSS", "JavaScript"],
-        role : "Frontend Developer",
-        url  : "https://brew-space.vercel.app",
-        github : "https://github.com/trigusf/BrewSpace"
-    },
-    {
-        id : 5,
         repo : "Inventory Management System",
         desc : "A web-based inventory management system designed to streamline stock tracking, manage incoming & outgoing goods, and generate accurate real-time reports.",
         img  : inverntoryManagement,
@@ -59,7 +50,7 @@ export const projects = [
         github : "https://github.com/trigusf/persediaan-barang"
     },
     {
-        id : 6,
+        id : 5,
         repo : "Service Desk - Ticketing system",
         desc : "An internal service desk application built with Laravel 10 and Tailwind CSS to track, manage, and resolve inter-team support tickets.",
         img  : serviceDesk,
@@ -67,5 +58,15 @@ export const projects = [
         role : "Frontend Developer - intern",
         url  : null,
         github : null,
-    }
+    },
+    {
+        id : 6,
+        repo : "BrewSpace Coffe Shop",
+        desc : "Modern responsive Coffee Shop landing page built with HTML, Tailwind CSS, and AOS animation.",
+        img  : brewSpace,
+        tech : ["Tailwind CSS", "JavaScript"],
+        role : "Frontend Developer",
+        url  : "https://brew-space.vercel.app",
+        github : "https://github.com/trigusf/BrewSpace"
+    },
 ]
