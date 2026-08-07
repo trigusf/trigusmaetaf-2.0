@@ -40,6 +40,7 @@ export default function Education(){
                         ))}
                     </div>
                 </div>
+
             </motion.div>
         </>
     )

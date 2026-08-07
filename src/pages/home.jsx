@@ -5,10 +5,10 @@ import Experience from '../components/experience'
 import Technologie from "../components/technologie"
 import Education from "../components/education"
 import Footer from "../components/footer"
+import Github from "../components/githubActivity"
 import { BrowserRouter } from "react-router-dom"
 import { projects } from "../data/projects"
 import { motion } from "motion/react"
-
 
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
       <Technologie />
       <Education /> 
     </div>
+      <Github />
     
     </>
   )

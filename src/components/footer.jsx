@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react"
 import { motion } from "motion/react"
 
-
 export default function Footer(){
     return (
         <>
@@ -11,7 +10,15 @@ export default function Footer(){
                 whileInView={{opacity: 1, y: 0}}
                 transition={{duration: 0.5}}
                 viewport={{once: true}}
-                className="sticky max-w-3xl w-full p-4 mb-4 md:mb-8 text-[var(--text)]">
+                className="sticky max-w-3xl w-full p-4 mb-4 md:mb-8 text-[var(--text)]
+            ">
+   
+
+
+
+
+
+
                 <div className="flex flex-col w-full gap-2 md:gap-3">
                     <div className="flex flex-col gap-4">
                         <span className="text-lg font-medium md:text-3xl items-start w-full self-start">
