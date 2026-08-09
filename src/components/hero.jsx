@@ -26,16 +26,22 @@ export default function Hero(){
                             </div>
 
                             <div className="flex gap-1 md:gap-2 items-center mt-1 md:text-2xl">
-                                <a href="https://github.com/trigusf" aria-label="github Profile" target="blank_" className="text-[var(--text-sec)] hover:text-[var(--text)] transition-all hover:-translate-y-1 duration-200">
+                                <a href="https://github.com/trigusf" 
+                                    aria-label="github Profile" target="blank_" 
+                                    className="p-0.5 text-xl md:p-0 md:text-3xl text-[var(--text-sec)] hover:text-[var(--text)] transition-all hover:-translate-y-1 duration-200">
                                     <Icon icon={"mdi:github"} />
                                 </a>
 
 
-                                <a href="https://www.linkedin.com/in/trigusf" aria-label="linkedIn Profile" target="blank_" className="grayscale hover:grayscale-0 transition-all hover:-translate-y-1 duration-200">
+                                <a href="https://www.linkedin.com/in/trigusf" 
+                                    aria-label="linkedIn Profile" target="blank_" 
+                                    className="p-0.5 text-xl md:p-0 md:text-2xl grayscale hover:grayscale-0 transition-all hover:-translate-y-1 duration-200">
                                     <Icon icon={"devicon:linkedin"} />
                                 </a>
 
-                                <a href="mailto:trigusf@gmail.com" target="blank_" aria-label="mail to @trigusf" className="text-[var(--text-sec)] hover:text-red-700 transition-all hover:-translate-y-1 duration-200">
+                                <a href="mailto:trigusf@gmail.com" 
+                                    target="blank_" aria-label="mail to @trigusf" 
+                                    className="p-0.5 text-xl md:p-0 md:text-3xl text-[var(--text-sec)] hover:text-red-700 transition-all hover:-translate-y-1 duration-200">
                                     <Icon icon={"material-symbols:mail"} />
                                 </a>
                             </div>
