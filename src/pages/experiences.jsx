@@ -29,8 +29,8 @@ export default function Experiences(){
                             <div>
                                 <div className="flex flex-col gap-3 md:gap-6 border p-4 border-dashed rounded-md border-[var(--border)]">
                                    {experiences.sort((a, b) => b.id - a.id).map((experience) => (
-                                    <div className="flex flex-col">
-                                        <div key={experience.id} className="flex flex-row-reverse items-start justify-between">
+                                    <div  key={experience.id} className="flex flex-col">
+                                        <div className="flex flex-row-reverse items-start justify-between">
                                             <div className="">
                                                 <span className="text-[var(--text-sec)] text-xs md:text-base">
                                                     {experience.duration}
@@ -50,8 +50,8 @@ export default function Experiences(){
                                         </div>
                                         <ul className="list-disc px-4 text-xs md:text-base p-2">
                                                 {experience.task.map((task, index) => (
-                                                    <li className="p-1 text-[var(--text-sec)]">
-                                                        <p key={index}>{task}</p>
+                                                    <li key={index} className="p-1 text-[var(--text-sec)]">
+                                                        <p>{task}</p>
                                                     </li>
                                                 ))}
                                         </ul>

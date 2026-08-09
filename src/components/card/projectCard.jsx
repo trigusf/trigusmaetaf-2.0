@@ -8,7 +8,12 @@ export default function ProjectCard({project, getSkillIcon}){
         <>
             <div className="cursor-pointer flex flex-col gap-2 md:h-full bg-[var(--surface)] p-2 border border-[var(--border)] border-dashed rounded-md shadow-2xs hover:shadow-md transition-all duration-200">
                 <div className="group w-full items-center align-middle flex h-44 md:h-46 bg-[var(--border)] overflow-hidden rounded-md group-hover:inset-shadow-sm">
-                    <img src={project.img} alt="Soon" className="scale-95 rounded-sm object-cover group-hover:scale-98 transition-transform" />
+                    <img 
+                        src={project.img} 
+                        alt={project.repo} 
+                        loading={project.id === 1 ? "eager" : "lazy"}
+                        fetchPriority={project.id === 1 ? "high" : "auto"}
+                        className="scale-95 rounded-sm object-cover group-hover:scale-98 transition-transform" />
                 </div>
                 <div className="flex flex-col">
                     <div className="font-semibold md:text-xl">{project.repo}</div>
@@ -27,12 +32,12 @@ export default function ProjectCard({project, getSkillIcon}){
                     </div>
                     <div className="flex gap-2">
                         {project.url &&
-                            <a href={project.url} target="_blank" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
+                            <a href={project.url} target="_blank" aria-label="link to project" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
                                 <Icon icon="mingcute:link-line" />
                             </a>
                         }
                         {project.github && 
-                            <a href={project.github} target="_blank" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
+                            <a href={project.github} target="_blank" aria-label="link to github" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
                                 <Icon icon={"mdi:github"} />
                             </a>
                         }

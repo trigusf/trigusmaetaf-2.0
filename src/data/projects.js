@@ -1,9 +1,9 @@
-import apexGaming from "../assets/project/apexGaming/apexGaming.png";
-import brewSpace from "../assets/project/brewSpace/brewSpace.png";
-import inverntoryManagement from "../assets/project/inventoryManagement/inventoryManagement.jpeg";
-import serviceDesk from "../assets/project/serviceDesk/serviceDesk.jpeg";
-import admin from "../assets/project/POSSelfService/admin.png"; 
-import POSCoffeShop from "../assets/project/POSCoffeShop/POSCoffeShop.png";
+import apexGaming from "../assets/project/apexGaming/apexGaming.webp";
+import brewSpace from "../assets/project/brewSpace/brewSpace.webp";
+import inverntoryManagement from "../assets/project/inventoryManagement/inventoryManagement.webp";
+import serviceDesk from "../assets/project/serviceDesk/serviceDesk.webp";
+import admin from "../assets/project/POSSelfService/admin.webp"; 
+import POSCoffeShop from "../assets/project/POSCoffeShop/POSCoffeShop.webp";
 
 
 

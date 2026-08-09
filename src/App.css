@@ -42,7 +42,7 @@ body{
 
 .scrolled{
   background-color: var(--navbar);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px var(--shadow);
 }
