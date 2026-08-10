@@ -62,7 +62,7 @@ export const skills = [
     },
     {
         id: 10,
-        icon : "devicon:github",
+        icon : "mdi:github",
         name : "Github",
         category : "Tools"
 

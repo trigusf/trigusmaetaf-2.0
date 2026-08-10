@@ -39,7 +39,7 @@ export default function ProjectCard({project, getSkillIcon}){
                         {project.github && 
                             <a href={project.github} target="_blank" aria-label="link to github" className="hover:scale-110 text-[var(--text-sec)] hover:text-[var(--text)] transition-all duration-170">
                                 <Icon icon={"mdi:github"} />
-                            </a>
+                            </a>    
                         }
                     </div>
                     

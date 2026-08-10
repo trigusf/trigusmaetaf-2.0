@@ -26,7 +26,6 @@ export default function UpButton(){
                     animate={{ opacity: 1, y: 20 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    whileHover={{y: -0.1}}
                     onClick={() => window.scrollTo({top : 0, behavior : "smooth"})} 
                     className="hidden md:block fixed bottom-16 right-16 text-[var(--text)] p-2 bg-[var(--surface)] border border-[var(--border)] rounded-md cursor-pointer shadow-xl
                 ">

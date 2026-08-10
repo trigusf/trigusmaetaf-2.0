@@ -7,10 +7,10 @@ import trigusmaetaf from "../assets/profile/trigusmaetaf.webp"
 export default function Hero(){
     return(
         <>
-            <div className="flex justify-center pt-12 md:pt-35">
+            <section className="flex justify-center pt-14 md:py-24 items-center">
                 <div className="md:max-w-3xl md:pt-16 w-full p-4">
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center w-20 h-20 lg:w-38 lg:h-38 md:w-24 md:h-24 bg-[var(--bg)] border border-[var(--border)] rounded-full overflow-hidden shadow-md">
+                        <div className="flex items-center w-20 h-20 lg:w-38 lg:h-38 md:w-24 md:h-24 bg-[var(--bg)] border-2 border-[var(--border)] rounded-full overflow-hidden shadow-md">
                             <img 
                                 src={trigusmaetaf} 
                                 alt="trigusmaetaf"
@@ -67,7 +67,7 @@ export default function Hero(){
                     </div>
                 </div>
                 
-            </div>
+            </section>
         </>
     )
 }
