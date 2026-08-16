@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 export default function ProjectCard({project, getSkillIcon}){
     const [activeProject, setActiveProject] = useState(null);
+    const [activeSlide, setActiveSlide] = useState(0)
 
     const selectedProject = projects.find((project) => project.id === activeProject)
 
@@ -28,7 +29,7 @@ export default function ProjectCard({project, getSkillIcon}){
                     className="projectCard">
                 <div className="group w-full items-center align-middle flex h-44 md:h-46 bg-[var(--border)] overflow-hidden rounded-md group-hover:inset-shadow-sm">
                     <img 
-                        src={project.img} 
+                        src={project.img[0]} 
                         alt={project.repo} 
                         loading={project.id === 1 ? "eager" : "lazy"}
                         fetchPriority={project.id === 1 ? "high" : "auto"}
@@ -90,11 +91,33 @@ export default function ProjectCard({project, getSkillIcon}){
                                 </button>
                             </div>
 
-                            <div className="p-4">
-                                <img 
-                                    src={selectedProject.img} 
-                                    alt={selectedProject.repo}
-                                    className="w-full h-full object-cover"  />
+                            <div className="relative w-full">
+                                
+                                    <div className="relative w-full p-4">
+                                        <img 
+                                            src={selectedProject.img[activeSlide]} 
+                                            alt={selectedProject.repo}
+                                            className="w-full h-full object-cover rounded-md"  />
+                                    </div>
+                             
+                                        <div className="absolute h-full left-4 right-4 top-1/2 text-white flex -translate-y-1/2 transform justify-between">
+                                            <button 
+                                                onClick={() => setActiveSlide(prev => prev === 0 ? selectedProject.img.length - 1 : prev - 1)}
+                                                className="p-2 md:p-4 cursor-pointer"
+                                            >
+                                                <Icon icon="ep:arrow-left-bold" />
+                                            </button>
+
+                                            <button 
+                                                onClick={() => setActiveSlide(prev => prev === selectedProject.img.length - 1 ? 0 : prev + 1)} 
+                                                className="p-2 md:p-4 cursor-pointer"
+                                            >
+                                                <Icon icon="ep:arrow-right-bold" />
+                                            </button>
+                                        </div>
+                            </div>
+                            <div className="p-4 rounded-md w-full">
+                                
                             </div>
                             
                         </motion.div>
