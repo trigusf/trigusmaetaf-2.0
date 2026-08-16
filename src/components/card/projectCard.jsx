@@ -105,7 +105,7 @@ export default function ProjectCard({project, getSkillIcon}){
 
                             <div className="relative w-full p-4">
                                 
-                                    <div className="relative w-full bg-[var(--bg)] rounded-md">
+                                    <div className="relative w-full h-full bg-[var(--bg)] rounded-md">
                                         <AnimatePresence mode="wait" initial={false} custom={direction}>
 
                                         <motion.img 
