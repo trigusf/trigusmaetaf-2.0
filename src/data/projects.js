@@ -39,7 +39,7 @@ export const projects = [
         tech : ["Tailwind CSS", "JavaScript"],
         role : "Frontend Developer",
         url  : "https://apexGaming.vercel.app",
-        github : "https://github.com/trigusf/ApexGaming"
+        github : "https://github.com/trigusf/ApexGaming",
     },
     {
         id : 4,

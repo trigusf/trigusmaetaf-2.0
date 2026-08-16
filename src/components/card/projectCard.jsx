@@ -3,11 +3,12 @@ import { projects } from "../../data/projects";
 import Skills from "../skills";
 import { Icon } from "@iconify/react";
 import { div, select } from "motion/react-client";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, disableInstantTransitions } from "motion/react";
 
 export default function ProjectCard({project, getSkillIcon}){
     const [activeProject, setActiveProject] = useState(null);
-    const [activeSlide, setActiveSlide] = useState(0)
+    const [activeSlide, setActiveSlide] = useState(0);
+    const [direction, setDirection] = useState(1)
 
     const selectedProject = projects.find((project) => project.id === activeProject)
 
@@ -21,7 +22,18 @@ export default function ProjectCard({project, getSkillIcon}){
         return () => {
             document.body.style.overflow = "";
         };
-    }, [activeProject]) 
+    }, [activeProject]);
+
+    useEffect(() => {
+        if (!selectedProject) return;
+        const interval = setInterval(() => {
+            setDirection(1);
+            
+            setActiveSlide(prev => prev === selectedProject.img.length - 1 ? 0 : prev + 1);
+
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [selectedProject])
 
     return(
         <>
@@ -91,13 +103,40 @@ export default function ProjectCard({project, getSkillIcon}){
                                 </button>
                             </div>
 
-                            <div className="relative w-full">
+                            <div className="relative w-full p-4">
                                 
-                                    <div className="relative w-full p-4">
-                                        <img 
-                                            src={selectedProject.img[activeSlide]} 
+                                    <div className="relative w-full bg-[var(--bg)] rounded-md">
+                                        <AnimatePresence mode="wait" initial={false} custom={direction}>
+
+                                        <motion.img 
+                                            src={selectedProject.img[activeSlide]}
+                                            key={activeSlide}
                                             alt={selectedProject.repo}
-                                            className="w-full h-full object-cover rounded-md"  />
+                                            custom={direction}
+                                            variants={{ 
+                                                enter: (direction) => ({
+                                                    x: direction > 0 ? "100%" : "-100%",
+                                                    opacity: 0,
+                                                }),
+                                                center: {
+                                                    x: 0,
+                                                    opacity: 1,
+                                                },
+                                                exit: (direction) => ({
+                                                    x: direction > 0 ? "-100%" : "100%",
+                                                    opacity: 0,
+                                                }),
+                                            }}
+                                                initial="enter"
+                                                animate="center"
+                                                exit="exit"
+                                                transition={{ 
+                                                    duration: 0.3,
+                                                    ease: "easeInOut",
+                                                 }}
+                                            className="w-full h-full bg-[var(--bg)] object-cover rounded-md"  />
+
+                                        </AnimatePresence>
                                     </div>
                              
                                         <div className="absolute h-full left-4 right-4 top-1/2 text-white flex -translate-y-1/2 transform justify-between">
