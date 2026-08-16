@@ -49,7 +49,7 @@ export default function Hero(){
                     </div>
                     <div className="text-[var(--text)] pt-4">
                         <div className="flex flex-col gap-4 md:gap-6">
-                            <h1 className="font-medium text-lg md:text-2xl lg:text-3xl">Web Developer</h1>
+                            <h1 className="font-medium text-lg md:text-2xl lg:text-3xl">Web Developer <span className="font-thin text-[var(--text-sec)]"> — Frontend Developer</span></h1>
                             <h2 className="text-xs md:text-lg text-[var(--text-sec)]">
                                 I'm a Web Developer with hands-on experience building responsive web applications using {""}
                                 <Skills id={'JavaScript'} /> {" "}

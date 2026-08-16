@@ -36,7 +36,9 @@ export default function Project({project}){
                             </span>
                             <div className="grid grid-cols-1 min-[490px]:grid-cols-2 gap-6">
                                 {projects.slice(0, 4).map((project) => (
-                                    <ProjectCard key={project.id} project={project} getSkillIcon={getSkillIcon} />
+                                    <div key={project.id} className="relative h-full">
+                                        <ProjectCard key={project.id}  project={project} getSkillIcon={getSkillIcon} />
+                                    </div>
                                 ))}
                             </div>  
                             

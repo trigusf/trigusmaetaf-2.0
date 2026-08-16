@@ -46,3 +46,7 @@ body{
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px var(--shadow);
 }
+
+.projectCard{
+  @apply text-left cursor-pointer flex flex-col gap-2 md:h-full bg-[var(--surface)] p-2 border border-[var(--border)] border-dashed rounded-md shadow-2xs hover:shadow-md transition-all duration-200
+}
