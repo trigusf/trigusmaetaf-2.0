@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MoveRight } from "lucide-react";
 
 export default function Button({children}){
+
     return(
         <>
             <div className="aura aura-dual aura-sm w-fit transition-all ease-in-out hover:scale-110 cursor-pointer">

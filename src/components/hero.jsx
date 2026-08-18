@@ -3,8 +3,16 @@ import Button from "./button";
 import Skills from "./skills";
 import { Icon } from "@iconify/react";
 import trigusmaetaf from "../assets/profile/trigusmaetaf.webp"
+import { motion, motionValue } from "framer-motion";
 
 export default function Hero(){
+    const [resume, setResume] = useState(false)
+
+    function selectResume(){
+        setResume(true)
+    }
+    console.log(resume)
+
     return(
         <>
             <section className="flex justify-center pt-14 md:py-24 items-center">
@@ -59,9 +67,48 @@ export default function Hero(){
                                 <Skills id={'MySQL'} /> {" "}
                                 through personal projects and internship experience. Passionate about creating clean, user-friendly interfaces while continuously expanding knowledge in modern frontend and backend development. Professional experience in finance administration has strengthened analytical thinking, attention to detail, and effective cross functional collaboration.     
                             </h2>
-                            <a href="https://drive.google.com/file/d/14QbeshcKOogmOsVVg6Gd4jFSW9Gvx4s6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                <Button>View Resume</Button>
-                            </a>
+
+                        <div className="relative">
+                            <button onClick={selectResume} className={ resume ? "hidden" : "grid"}>
+                                <Button onClick="selectResume">View Resume</Button>
+                            </button>
+
+                        {resume && (
+                            <motion.div className="flex gap-2 md:gap-2">
+                                <motion.a 
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }} 
+                                    transition={{
+                                        duration: 0.7,
+                                        ease: "easeOut",
+                                        type: "spring"
+                                    }}
+                                    href="https://drive.google.com/file/d/1ZEsB2AkeZXWupqSD2d7YNXCSY30Lm1i9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    <Button>
+                                        <Icon icon="twemoji:flag-indonesia" />
+                                        ID 
+                                    </Button>
+                                </motion.a>
+
+                                <motion.a 
+                                    initial={{ scale: false, x: -85 }}
+                                    animate={{ scale: 1, x: 0 }} 
+                                    transition={{
+                                        duration: 1,
+                                        ease: [0.2, 0.24, 0.3, 1.8],
+                                        type: "spring"
+                                    }}
+                                    href="https://drive.google.com/file/d/1R7EEj1SXhcCpB779SWoX9ajxm-rflvcG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    <Button>
+                                        <Icon icon="twemoji:flag-united-states" />
+
+                                        EN
+                                    </Button>
+                                </motion.a>
+                            </motion.div>
+                        )}
+                        </div>
+                            
                             
                         </div>
                     </div>

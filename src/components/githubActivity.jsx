@@ -12,7 +12,7 @@ export default function Github(){
     return(
         <>
             <section className="w-full text-[var(--text)] p-4 max-w-3xl">
-                <div className="flex flex-col gap-4 md:gap-8">
+                <div className="flex flex-col gap-4 md:gap-8 scrollbar-none">
                     <div className="flex flex-col md:flex-row justify-between">
                         <span className="text-lg font-medium md:text-3xl items-start w-full self-start">Github Activity</span>
                         <div className="flex gap-1">
@@ -23,7 +23,7 @@ export default function Github(){
                             ))}
                         </div>
                     </div>
-                    <GitHubCalendar username="trigusf" year={year ? year : new Date().getFullYear()} colorScheme="dark" />
+                    <GitHubCalendar username="trigusf" year={year ? year : new Date().getFullYear()} colorScheme="dark" className="scrollbar-none" />
                 </div>
             </section>
         </>
