@@ -12,9 +12,9 @@ export const projects = [
         url  : null,
         github : "https://github.com/trigusf/POS-SelfServices-CoffeShop",
         studyCases : [{
-            whatILearn : null,
-            why: null,
-            goal: null
+            whatILearn : ["im still working on it (sorry) :)"],
+            why: "im still working on it (sorry) :)",
+            goal: "im still working on it (sorry) :)"
         }]
 
     },
@@ -30,9 +30,9 @@ export const projects = [
         url  : null,
         github : "https://github.com/trigusf/POS-CoffeShop",
         studyCases : [{
-            whatILearn : null,
-            why: null,
-            goal: null
+            whatILearn : ["im still working on it (sorry) :)"],
+            why: "im still working on it (sorry) :)",
+            goal: "im still working on it (sorry) :)"
         }]
     },
     {
@@ -51,9 +51,9 @@ export const projects = [
         url  : "https://apexGaming.vercel.app",
         github : "https://github.com/trigusf/ApexGaming",
         studyCases : [{
-            whatILearn : null,
-            why: null,
-            goal: null
+            whatILearn : ["im still working on it (sorry) :)"],
+            why: "im still working on it (sorry) :)",
+            goal: "im still working on it (sorry) :)"
         }]
 
     },
@@ -92,9 +92,9 @@ export const projects = [
         url  : null,
         github : null,
         studyCases : [{
-            whatILearn : null,
-            why: null,
-            goal: null
+            whatILearn : ["im still working on it (sorry) :)"],
+            why: "im still working on it (sorry) :)",
+            goal: "im still working on it (sorry) :)"
         }]
     },
     {
@@ -109,9 +109,9 @@ export const projects = [
         url  : "https://brew-space.vercel.app",
         github : "https://github.com/trigusf/BrewSpace",
         studyCases : [{
-            whatILearn : null,
-            why: null,
-            goal: null
+            whatILearn : ["im still working on it (sorry) :)"],
+            why: "im still working on it (sorry) :)",
+            goal: "im still working on it (sorry) :)"
         }]
     },
 ]
