@@ -78,6 +78,8 @@ export default function ProjectCard({project, getSkillIcon}){
                 </div>
             </motion.div> 
 
+
+{/* modal detail project */}
             <AnimatePresence>
             {activeProject && (
                 <>
@@ -94,8 +96,8 @@ export default function ProjectCard({project, getSkillIcon}){
                             exit={{ opacity: 0, scale: 0.8, y: 20 }}
                             transition={{ duration: 0.25, ease: "easeOut"}} >
 
-                            <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-b-[var(--border)]">
-                                <span className="font-semibold">{selectedProject.repo}</span>
+                            <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-b-[var(--border)] bg-[var(--surface)]">
+                                <span className="font-semibold">Detail Project</span>
                                 <button 
                                     onClick={() => setActiveProject(null)}
                                     className="p-2 border rounded-sm border-[var(--border)] hover:bg-[var(--border)]">
@@ -105,7 +107,7 @@ export default function ProjectCard({project, getSkillIcon}){
 
                             <div className="relative w-full p-4">
                                 
-                                    <div className="relative w-full h-full bg-[var(--bg)] rounded-md">
+                                    <div className="relative w-full h-full bg-[var(--bg)] p-1.5 rounded-md">
                                         <AnimatePresence mode="wait" initial={false} custom={direction}>
 
                                         <motion.img 
@@ -155,8 +157,59 @@ export default function ProjectCard({project, getSkillIcon}){
                                             </button>
                                         </div>
                             </div>
-                            <div className="p-4 rounded-md w-full">
-                                
+                            <div className="p-4 rounded-md w-full flex flex-col gap-6">
+                                <div className="flex flex-col gap-3">
+                                    <span className="md:text-2xl font-bold">{selectedProject.repo}</span>
+                                    <p className="font-light text-[var(--text-sec)]">{selectedProject.desc}</p>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
+                                        <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">Why i Built ?</span>
+                                        <p className="text-sm md:text-base">
+                                            {selectedProject.studyCases[0].why}
+                                        </p>
+                                                 
+                                    </div>
+                                    <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
+                                        <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">Goal</span>
+                                        <p className="text-sm md:text-base">
+                                            {selectedProject.studyCases[0].goal}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
+                                    <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">
+                                        What I Learn
+                                    </span>
+                                        {selectedProject.studyCases[0].whatILearn ?? [].map((learn, index) => (
+                                            learn !== null (
+                                                <span className="flex items-center text-sm md:text-base gap-2">
+                                                <div>
+                                                    <Icon icon="ic:round-check" color="green"/>
+                                                </div>
+                                                <p>
+                                                    {learn}
+                                                </p>
+                                            </span>
+                                            )
+                                        ))}
+                                </div>
+                                <div className="gap-4">
+                                    <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
+                                        <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">
+                                            Tech Stack
+                                        </span>
+                                        <div className="text-sm md:text-base flex gap-3">
+                                            {selectedProject.tech.map((tech) => (
+                                                <div key={tech} className="text-sm md:text-xl flex justify-center w-full items-center gap-2 border border-[var(--border)] border-dashed rounded-sm p-2">
+                                                    {getSkillIcon({nameSkill: tech})}
+                                                    {tech}
+                                                </div>
+                                            ))}
+                                        </div>
+                                                 
+                                    </div>
+                                </div>
                             </div>
                             
                         </motion.div>

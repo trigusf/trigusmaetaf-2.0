@@ -10,7 +10,12 @@ export const projects = [
         tech : ["React", "Tailwind CSS", "Supabase"],
         role : "Backend Developer",
         url  : null,
-        github : "https://github.com/trigusf/POS-SelfServices-CoffeShop"
+        github : "https://github.com/trigusf/POS-SelfServices-CoffeShop",
+        studyCases : [{
+            whatILearn : null,
+            why: null,
+            goal: null
+        }]
 
     },
     {
@@ -23,7 +28,12 @@ export const projects = [
         tech : ["Java", "MySQL"],
         role : "Backend Developer",
         url  : null,
-        github : "https://github.com/trigusf/POS-CoffeShop"
+        github : "https://github.com/trigusf/POS-CoffeShop",
+        studyCases : [{
+            whatILearn : null,
+            why: null,
+            goal: null
+        }]
     },
     {
         id : 3,
@@ -34,24 +44,41 @@ export const projects = [
             "/projects/apexgaming/apex1.webp",
             "/projects/apexgaming/apex2.webp",
             "/projects/apexgaming/apex3.webp",
-            "/projects/apexgaming/apex4.webp",
+            "/projects/apexgaming/apex4.webp",            
         ],
         tech : ["Tailwind CSS", "JavaScript"],
         role : "Frontend Developer",
         url  : "https://apexGaming.vercel.app",
         github : "https://github.com/trigusf/ApexGaming",
+        studyCases : [{
+            whatILearn : null,
+            why: null,
+            goal: null
+        }]
+
     },
     {
         id : 4,
         repo : "Inventory Management System",
-        desc : "A web-based inventory management system designed to streamline stock tracking, manage incoming & outgoing goods, and generate accurate real-time reports.",
+        desc : "A web-based inventory management system designed to streamline stock tracking, manage incoming & outgoing goods.",
         img  : [
             "/projects/inventoryManagement/inventoryManagement.webp"
         ],
         tech : ["php", "JavaScript", "MySQL"],
         role : "FullStack Developer",
         url  : null,
-        github : "https://github.com/trigusf/persediaan-barang"
+        github : "https://github.com/trigusf/persediaan-barang",
+        studyCases : [{
+            whatILearn : [
+                "Learned how to process and validate data on the server before shorting it in the database",
+                "learned how to structure tables based on the aplication's requirements",
+                "learned how to reduce data duplication and keep the database orginize",
+                "learned CRUD operation from database",
+                "learned how to identify and solve issues throughout the development process"
+            ],
+            why: "I build this project to create a more structured way of monitoring incoming and outgoing goods. The goal was to make inventory activities easier to record, track, and manage while reducing the risk of inconsistent or missing data.",
+            goal: "The goal of this project was to build a system that could record and track goods efficiently while applying what i had learned about backend development, database, design, and data validation. It also became my first experience building a complete application and connection different parts of a system together."
+        }]
     },
     {
         id : 5,
@@ -64,6 +91,11 @@ export const projects = [
         role : "Frontend Developer - intern",
         url  : null,
         github : null,
+        studyCases : [{
+            whatILearn : null,
+            why: null,
+            goal: null
+        }]
     },
     {
         id : 6,
@@ -75,6 +107,11 @@ export const projects = [
         tech : ["Tailwind CSS", "JavaScript"],
         role : "Frontend Developer",
         url  : "https://brew-space.vercel.app",
-        github : "https://github.com/trigusf/BrewSpace"
+        github : "https://github.com/trigusf/BrewSpace",
+        studyCases : [{
+            whatILearn : null,
+            why: null,
+            goal: null
+        }]
     },
 ]
