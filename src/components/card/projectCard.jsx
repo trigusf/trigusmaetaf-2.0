@@ -165,14 +165,14 @@ export default function ProjectCard({project, getSkillIcon}){
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
                                         <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">Why i Built ?</span>
-                                        <p className="text-sm md:text-base">
+                                        <p className="text-sm md:text-base font-light">
                                             {selectedProject.studyCases[0].why}
                                         </p>
                                                  
                                     </div>
                                     <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
                                         <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">Goal</span>
-                                        <p className="text-sm md:text-base">
+                                        <p className="text-sm md:text-base font-light">
                                             {selectedProject.studyCases[0].goal}
                                         </p>
                                     </div>
@@ -181,20 +181,20 @@ export default function ProjectCard({project, getSkillIcon}){
                                     <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">
                                         What I Learn
                                     </span>
-                                        {selectedProject.studyCases[0].whatILearn ?? [].map((learn, index) => (
-                                            learn !== null (
-                                                <span className="flex items-center text-sm md:text-base gap-2">
+                                        {(selectedProject.studyCases[0].whatILearn ?? []).map((learn) => (
+                                            learn !== null && (
+                                                <span className="flex items-center text-sm py-2 md:text-base font-light gap-2">
                                                 <div>
                                                     <Icon icon="ic:round-check" color="green"/>
                                                 </div>
                                                 <p>
                                                     {learn}
                                                 </p>
-                                            </span>
+                                                </span>
                                             )
                                         ))}
                                 </div>
-                                <div className="gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="relative border p-2 pt-4 border-dashed border-[var(--border)] rounded-md">
                                         <span className="absolute -top-3.5 md:text-xl px-2 font-semibold bg-[var(--surface)] ">
                                             Tech Stack
